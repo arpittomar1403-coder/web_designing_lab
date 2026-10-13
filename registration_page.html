@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration - Online Book Store</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Header Frame (Logo Left, Title Center, Nav Right) */
+    .top-frame {
+      background-color: #e57373;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      color: white;
+      height: 18vh;
+    }
+    
+    .logo-container {
+      background-color: white;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .logo-container img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .header-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      flex: 1;
+    }
+    
+    .top-nav {
+      display: flex;
+      gap: 20px;
+    }
+    .top-nav a {
+      color: #0000ee;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Main Layout Container */
+    .main-container {
+      display: flex;
+      flex: 1;
+      height: 82vh;
+      overflow: hidden;
+    }
+
+    /* Left Sidebar Frame (Departments) */
+    .left-frame {
+      width: 180px;
+      background-color: #81c784;
+      padding: 25px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .left-frame a {
+      color: #0000ee;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Right Content Frame (Registration Form) */
+    .right-frame {
+      flex: 1;
+      background-color: #f5f5f5;
+      padding: 20px 40px;
+      overflow-y: auto;
+    }
+
+    .right-frame h2 {
+      font-family: "Times New Roman", Times, serif;
+      color: green;
+      font-size: 24px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .instruction-text {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* Registration Form Box */
+    .reg-form-container {
+      background-color: #fffde7; /* Light cream/yellowish form background */
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 25px 40px;
+      border: 1px solid #d4e157;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-row label {
+      width: 180px;
+      font-weight: bold;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .form-row input[type="text"],
+    .form-row input[type="password"],
+    .form-row input[type="email"],
+    .form-row input[type="tel"],
+    .form-row textarea {
+      flex: 1;
+      padding: 8px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background-color: white;
+    }
+
+    .form-row textarea {
+      resize: vertical;
+      height: 60px;
+    }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .radio-group label, .checkbox-group label {
+      font-weight: normal;
+      width: auto;
+      cursor: pointer;
+    }
+
+    .dob-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .dob-group select {
+      padding: 6px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      background-color: white;
+      border-radius: 3px;
+    }
+
+    .form-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .form-buttons button {
+      padding: 8px 25px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(to bottom, #ffecb3, #ffd54f);
+      border: 1px solid #fbc02d;
+      border-radius: 4px;
+    }
+
+    .form-buttons button[type="reset"] {
+      background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Frame -->
+  <div class="top-frame">
+    <div class="logo-container">
+      <img src="9di_logo-gl.jpg" alt="/Users/arpittomar/Library/Containers/com.apple.Preview/Data/tmp/VKTemp/5AD8B59A-9A7F-4609-AF24-96912D69AA7B/Image.png">
+    </div>
+    
+    <!-- Center: Title -->
+    <div class="header-title">Online book Store</div>
+    
+    <!-- Top Right: Navigation Links -->
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="login.html">login</a>
+      <a href="registration.html">registration</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="cart.html">cart</a>
+    </nav>
+  </div>
+
+  <!-- Main Section (Left Sidebar + Right Registration Form Content) -->
+  <div class="main-container">
+    
+    <!-- Left Frame: Departments -->
+    <div class="left-frame">
+      <a href="#">CSE</a>
+      <a href="#">ECE</a>
+      <a href="#">EEE</a>
+      <a href="#">CIVIL</a>
+    </div>
+
+    <!-- Right Frame: Registration Form -->
+    <div class="right-frame">
+      <h2>Registration Page</h2>
+      <div class="instruction-text">
+        Create a registration form with the required fields[cite: 13].
+      </div>
+
+      <div class="reg-form-container">
+        <form>
+          <!-- 1. Name -->
+          <div class="form-row">
+            <label for="name">1) Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <!-- 2. Password -->
+          <div class="form-row">
+            <label for="password">2) Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+          </div>
+
+          <!-- 3. E-mail -->
+          <div class="form-row">
+            <label for="email">3) E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="abc@domain.com" required>
+          </div>
+
+          <!-- 4. Phone Number -->
+          <div class="form-row">
+            <label for="phone">4) Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required>
+          </div>
+
+          <!-- 5. Sex -->
+          <div class="form-row">
+            <label>5) Sex:</label>
+            <div class="radio-group">
+              <label><input type="radio" name="sex" value="Male" required> Male</label>
+              <label><input type="radio" name="sex" value="Female"> Female</label>
+              <label><input type="radio" name="sex" value="Other"> Other</label>
+            </div>
+          </div>
+
+          <!-- 6. Date of Birth -->
+          <div class="form-row">
+            <label>6) Date of Birth:</label>
+            <div class="dob-group">
+              <!-- Day Select -->
+              <select name="day" required>
+                <option value="">Day</option>
+                <script>
+                  for(let i=1; i<=31; i++) document.write(`<option value="${i}">${i}</option>`);
+                </script>
+              </select>
+              <!-- Month Select -->
+              <select name="month" required>
+                <option value="">Month</option>
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="Jun">Jun</option>
+                <option value="Jul">Jul</option>
+                <option value="Aug">Aug</option>
+                <option value="Sep">Sep</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+              <!-- Year Select -->
+              <select name="year" required>
+                <option value="">Year</option>
+                <script>
+                  for(let y=2026; y>=1950; y--) document.write(`<option value="${y}">${y}</option>`);
+                </script>
+              </select>
+            </div>
+          </div>
+
+          <!-- 7. Languages Known -->
+          <div class="form-row">
+            <label>7) Languages Known:</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="lang" value="English"> English</label>
+              <label><input type="checkbox" name="lang" value="Telugu"> Telugu</label>
+              <label><input type="checkbox" name="lang" value="Hindi"> Hindi</label>
+              <label><input type="checkbox" name="lang" value="Tamil"> Tamil</label>
+            </div>
+          </div>
+
+          <!-- 8. Address -->
+          <div class="form-row">
+            <label for="address">8) Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your full address..."></textarea>
+          </div>
+
+          <!-- Form Buttons -->
+          <div class="form-buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

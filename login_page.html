@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Online Book Store</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Header Frame (Logo Left, Title Center, Nav Right) */
+    .top-frame {
+      background-color: #e57373;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      color: white;
+      height: 18vh;
+    }
+    .logo-container {
+      background-color: white;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .logo-container img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      display: block;
+    }
+    .header-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      flex: 1; /* Centers the title perfectly */
+    }
+    .top-nav {
+      display: flex;
+      gap: 30px;
+    }
+    .top-nav a {
+      color: #0000ee;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Main Layout Container */
+    .main-container {
+      display: flex;
+      flex: 1;
+      height: 82vh;
+    }
+
+    /* Left Sidebar Frame (Departments Only) */
+    .left-frame {
+      width: 180px;
+      background-color: #81c784;
+      padding: 25px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .left-frame a {
+      color: #0000ee;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Right Content Frame (Yellow Login Box Layout) */
+    .right-frame {
+      flex: 1;
+      background-color: #f5f5f5;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right-frame h2 {
+      font-family: "Times New Roman", Times, serif;
+      color: black;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .right-frame .sub-title {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* Yellow Login Container */
+    .login-box {
+      background-color: #fdd835;
+      width: 450px;
+      padding: 40px 30px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .form-group label {
+      font-size: 18px;
+      font-weight: bold;
+      color: black;
+      width: 110px;
+    }
+
+    .form-group input {
+      flex: 1;
+      padding: 8px 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      background-color: white;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .submit-btn {
+      padding: 6px 20px;
+      font-size: 16px;
+      background-color: #efefef;
+      border: 1px solid #999;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Frame -->
+  <div class="top-frame">
+    <!-- Top Left: Logo -->
+    <div class="logo-container">
+      <img src="9di_logo-gl.jpg" alt="/Users/arpittomar/Library/Containers/com.apple.Preview/Data/tmp/VKTemp/8322AF4D-9E76-4CC6-BA67-88192805D48B/Image.png">
+    </div>
+    <!-- Center: Title -->
+    <div class="header-title">Online book Store</div>
+    <!-- Top Right: Navigation Links -->
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="login.html">login</a>
+    </nav>
+  </div>
+
+  <!-- Main Section (Left Sidebar + Right Login Content) -->
+  <div class="main-container">
+    
+    <!-- Left Frame: Departments -->
+    <div class="left-frame">
+      <a href="#">ECE</a>
+      <a href="#">EEE</a>
+      <a href="#">CSE</a>
+      <a href="#">CIVIL</a>
+      <a href="#">ME</a>
+    </div>
+
+    <!-- Right Frame: Login Box -->
+    <div class="right-frame">
+      <h2>Online book Store Information</h2>
+      <p class="sub-title">This is the book for the department CSE,ECE,EEE,CIVIL,ME Etc</p>
+
+      <!-- Yellow Login Box -->
+      <div class="login-box">
+        <form>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+          </div>
+
+          <div class="form-group" style="margin-top: 20px;">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+          </div>
+
+          <div class="button-container">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

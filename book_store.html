@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Book Store - GL Bajaj</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Top Header Frame */
+    .top-frame {
+      background-color: #e57373;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+      height: 20vh;
+    }
+    .logo-container {
+      background-color: white;
+      padding: 5px;
+      border-radius: 4px;
+      margin-right: 20px;
+    }
+    .logo-container img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      display: block;
+    }
+    .header-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      margin-right: 50px;
+    }
+    .top-nav {
+      display: flex;
+      gap: 30px;
+    }
+    .top-nav a {
+      color: #0000ee;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    /* Main Layout Container */
+    .main-container {
+      display: flex;
+      flex: 1;
+      height: 80vh;
+    }
+    /* Left Sidebar Frame */
+    .left-frame {
+      width: 180px;
+      background-color: #81c784;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .left-frame a {
+      color: #0000ee;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    /* Right Content Frame */
+    .right-frame {
+      flex: 1;
+      background-color: #e0f7fa;
+      padding: 50px;
+      text-align: center;
+    }
+    .right-frame h2 {
+      font-family: "Times New Roman", Times, serif;
+      color: green;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+    .right-frame p {
+      font-family: "Monotype Corsiva", cursive, "Comic Sans MS", sans-serif;
+      color: blue;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Frame -->
+  <div class="top-frame">
+    <div class="logo-container">
+      <img src="9di_logo-gl.jpg" alt="/Users/arpittomar/Library/Containers/com.apple.Preview/Data/tmp/VKTemp/8322AF4D-9E76-4CC6-BA67-88192805D48B/Image.png">
+    </div>
+    <div class="header-title">Online book Store</div>
+    <nav class="top-nav">
+      <a href="#">Home</a>
+      <a href="#">login</a>
+      <a href="#">registration</a>
+      <a href="#">Catalogue</a>
+      <a href="#">cart</a>
+    </nav>
+  </div>
+
+  <!-- Bottom Section (Left Sidebar + Right Content) -->
+  <div class="main-container">
+    
+    <!-- Left Frame -->
+    <div class="left-frame">
+      <a href="#">ECE</a>
+      <a href="#">EEE</a>
+      <a href="#">CSE</a>
+      <a href="#">CIVIL</a>
+      <a href="#">ME</a>
+    </div>
+
+    <!-- Right Frame -->
+    <div class="right-frame">
+      <h2>Online book Store Information</h2>
+      <p>This is the book for the department CSE, ECE, EEE, CIVIL, ME Etc</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

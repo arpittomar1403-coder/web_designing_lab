@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Online Book Store</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Header Frame (Logo Left, Title Center, Nav Right) */
+    .top-frame {
+      background-color: #e57373;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      color: white;
+      height: 18vh;
+    }
+    
+    .logo-container {
+      background-color: white;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .logo-container img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .header-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      flex: 1;
+    }
+    
+    .top-nav {
+      display: flex;
+      gap: 20px;
+    }
+    .top-nav a {
+      color: #0000ee;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Main Layout Container */
+    .main-container {
+      display: flex;
+      flex: 1;
+      height: 82vh;
+      overflow: hidden;
+    }
+
+    /* Left Sidebar Frame (Departments) */
+    .left-frame {
+      width: 180px;
+      background-color: #81c784;
+      padding: 25px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .left-frame a {
+      color: #0000ee;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Right Content Frame (Cart Table) */
+    .right-frame {
+      flex: 1;
+      background-color: #f5f5f5;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .right-frame h2 {
+      font-family: "Times New Roman", Times, serif;
+      color: green;
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .instruction-text {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* Cart Table Styling */
+    .cart-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .cart-table th, .cart-table td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .cart-table th {
+      background-color: #f3e5f5;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .total-row {
+      font-weight: bold;
+      background-color: #fafafa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Frame -->
+  <div class="top-frame">
+    <div class="logo-container">
+      <img src="9di_logo-gl.jpg" alt="/Users/arpittomar/Library/Containers/com.apple.Preview/Data/tmp/VKTemp/0AE8F001-6732-4BE2-85EA-D11AB8A5AC63/Image.png">
+    </div>
+    
+    <!-- Center: Title -->
+    <div class="header-title">Online book Store</div>
+    
+    <!-- Top Right: Navigation Links -->
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="login.html">login</a>
+      <a href="#">registration</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="cart.html">cart</a>
+    </nav>
+  </div>
+
+  <!-- Main Section (Left Sidebar + Right Cart Content) -->
+  <div class="main-container">
+    
+    <!-- Left Frame: Departments -->
+    <div class="left-frame">
+      <a href="#">CSE</a>
+      <a href="#">ECE</a>
+      <a href="#">EEE</a>
+      <a href="#">CIVIL</a>
+    </div>
+
+    <!-- Right Frame: Cart Table -->
+    <div class="right-frame">
+      <h2>Cart Page</h2>
+      <div class="instruction-text">
+        The cart page contains the details about the books which are added to the cart[cite: 11].
+      </div>
+      
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>Book Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Item 1 -->
+          <tr>
+            <td>CSE[cite: 11]</td>
+            <td>Java 2[cite: 11]</td>
+            <td>$35.5[cite: 11]</td>
+            <td>2[cite: 11]</td>
+            <td>$70.0[cite: 11]</td>
+          </tr>
+          <!-- Item 2 -->
+          <tr>
+            <td>EEE[cite: 11]</td>
+            <td>XML Bible[cite: 11]</td>
+            <td>$40.5[cite: 11]</td>
+            <td>1[cite: 11]</td>
+            <td>$40.5[cite: 11]</td>
+          </tr>
+          <!-- Total Amount Row -->
+          <tr class="total-row">
+            <td colspan="4" style="text-align: right;">Total Amount:</td>
+            <td>$110.5[cite: 11]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>
